@@ -1,0 +1,98 @@
+/* Imagen de fondo que cubre todo */
+.login-overlay {
+  background-image: url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d"); /* usa la URL de tu Camaro */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenedor del formulario */
+.login-form-container {
+  width: 100%;
+  max-width: 400px;
+  margin-right: 5%;
+}
+
+/* Tarjeta semitransparente */
+.login-card {
+  background: rgba(0, 0, 0, 0.85); /* Fondo negro semitransparente */
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  color: white;
+  position: relative;
+}
+
+.login-card h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+
+.login-card .cancel {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 0.9em;
+  color: #ff5722;
+  cursor: pointer;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: white;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #ff5722;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1em;
+  margin-top: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-card button:hover {
+  background: #e64a19;
+}
+
+.login-card a {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+.links,
+.register-link {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .login-overlay {
+    justify-content: center;
+    padding: 2em;
+  }
+
+  .login-form-container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .login-card {
+    width: 100%;
+  }
+}

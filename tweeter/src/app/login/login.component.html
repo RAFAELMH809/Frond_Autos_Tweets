@@ -1,0 +1,23 @@
+<div class="login-overlay">
+  <div class="login-form-container">
+    <div class="login-card">
+      <h2>Auto Club Login</h2>
+      <a class="cancel" routerLink="/">Cancel</a>
+
+      <input type="email" [(ngModel)]="email" placeholder="User Name" />
+      <input type="password" [(ngModel)]="password" placeholder="Password" />
+
+      <div class="links">
+        <a routerLink="/forgot-password">Forgot Password?</a>
+      </div>
+
+      <button (click)="callLogin()">Login</button>
+
+      <div class="register-link">
+        <a routerLink="/newuser">New? Create account</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

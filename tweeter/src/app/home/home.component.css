@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-text {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.form-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: -1px;
+  padding: 0 30px;
+  z-index: 2;
+  position: relative;
+}
+
+.card {
+  flex: 1;
+  background-color: #0f111a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.card h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.card input {
+ padding: 8px;
+  margin: 6px 0;
+  border-radius: 4px;
+  background-color: #161b22;
+  color: white;
+  border: 1px solid #30363d;
+}
+
+.card button {
+  padding: 8px;
+  background-color: #d6138b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: #e72aa3;
+}
+.espaciador {
+  height: 46px;
+}
+.tweet-feed {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.tweet-card {
+ background-color: #161b22;
+  border-left: 5px solid #36b92a;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.5);
+}
+
+.tweet-header {
+  margin-bottom: 10px;
+}
+.tweet-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #32ff7e; /* verde fosfo */
+  margin: 0 0 4px 0;
+  text-shadow: 1px 1px 3px rgba(0, 255, 128, 0.3);
+}
+
+.tweet-author {
+  font-size: 13px;
+  color: #aaa;
+  font-style: italic;
+  margin: 0;
+}
+
+.tweet-author span {
+  color: #7ed6df; /* celeste claro */
+  font-weight: 600;
+}
+
+.tweet-image {
+  width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.reactions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.reactions button {
+  background-color: #21262d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.reactions .active {
+  background-color: #399ab3;
+}
+
+.comments-section {
+  margin-top: 10px;
+  border-top: 1px solid #30363d;
+  padding-top: 10px;
+}
+
+.comments-section input {
+  width: 70%;
+  padding: 6px;
+  margin-right: 6px;
+  border-radius: 4px;
+  border: 1px solid #30363d;
+  background-color: #0d1117;
+  color: white;
+}
+
+.comments-section button {
+  padding: 6px 12px;
+  background-color: #3ccc2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.delete-button {
+  margin-left: auto;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .form-section {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .tweet-feed {
+    padding: 16px;
+  }
+
+  .tweet-card {
+    padding: 18px;
+  }
+
+  .welcome-text {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hero {
+    height: 200px;
+  }
+}
+
+
+

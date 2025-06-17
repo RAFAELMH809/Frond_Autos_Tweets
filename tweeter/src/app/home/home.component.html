@@ -1,0 +1,50 @@
+<div class="hero">
+  <img src="https://d1gl66oyi6i593.cloudfront.net/wp-content/uploads/2021/07/lamborghini-aventador-lp-780-4-ultimate-7.jpg" alt="Banner" class="hero-img" />
+  <div class="overlay">
+    <h1 class="welcome-text">Bienvenido {{ username }}</h1>
+  </div>
+</div>
+
+<div class="form-section">
+  <div class="card tweet-form">
+    <h3>Publicar tweet</h3>
+    <input type="text" [(ngModel)]="tweetText" placeholder="Escribe tu tweet" />
+    <button (click)="addTweetTextOnly()">Publicar texto</button>
+  </div>
+
+  
+  <div class="card tweet-url">
+    <h3>Publicar imagen por URL</h3>
+    <input type="text" [(ngModel)]="tweetImageUrl" placeholder="URL de la imagen" />
+    <button (click)="addTweetImageUrl()">Publicar imagen</button>
+  </div>
+</div>
+
+<div class="tweet-feed">
+  <div class="tweet-card" *ngFor="let tweet of tweets">
+    <div class="tweet-header">
+    <h3 class="tweet-text">
+      #{{ tweet.id }} - {{ tweet.tweet }}
+      </h3>
+      <p class="tweet-author">
+    Publicado por: <span>{{ tweet.postedBy.username }}</span>
+  </p>
+</div>
+
+    <img *ngIf="tweet.imageUrl" [src]="tweet.imageUrl" alt="Imagen" class="tweet-image" />
+
+    <div class="reactions">
+      <button [class.active]="userReactions[tweet.id] === 1" (click)="reactToTweet(tweet.id, 1)">👍 Like {{ reactionCounts[tweet.id][1] || 0 }}</button>
+      <button [class.active]="userReactions[tweet.id] === 2" (click)="reactToTweet(tweet.id, 2)">👎 Dislike {{ reactionCounts[tweet.id][2] || 0 }}</button>
+      <button *ngIf="canDelete(tweet)" (click)="deleteTweet(tweet.id)" class="delete-button">🗑️ Eliminar</button>
+    </div>
+
+    <div class="comments-section">
+      <div *ngFor="let comment of comments[tweet.id]">
+        <p><strong>{{ comment.username }}</strong>: {{ comment.content }}</p>
+      </div>
+      <input [(ngModel)]="newComment[tweet.id]" placeholder="Escribe un comentario..." />
+      <button (click)="postComment(tweet.id)">Comentar</button>
+    </div>
+  </div>
+</div>
