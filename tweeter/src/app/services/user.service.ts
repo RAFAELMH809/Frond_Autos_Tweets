@@ -18,7 +18,7 @@ import {  map } from 'rxjs/operators';
 
 export class UserService {
 
-  apiURL = 'http://localhost:8080/';
+  apiURL = 'https://back-autos-tweet.onrender.com/';
 
   constructor(
     private http: HttpClient,
@@ -180,7 +180,7 @@ console.log("email ... " + myUser.email);
        console.log("Success " + myUser.id);
        myUser.id = 1; // Success
        myUser.email = email;
-       myUser.username = "adsofsito";
+       myUser.username = "";
        myUser.password = "";
     }
     else {

@@ -8,7 +8,7 @@ import { StorageService } from './storage.service';
   providedIn: 'root'
 })
 export class CommentService {
-  private API_URL = 'http://localhost:8080/api/comments'; // ajusta si es diferente
+  private API_URL = 'https://back-autos-tweet.onrender.com/api/comments'; // ajusta si es diferente
 
   constructor(
   private http: HttpClient,

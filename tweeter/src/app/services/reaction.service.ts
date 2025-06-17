@@ -10,7 +10,7 @@ import { TweetReactionRequest } from '../models/reactions/TweetReactionRequest';
 })
 export class ReactionService {
 
-  apiURL = 'http://localhost:8080/api/reactions';
+  apiURL = 'https://back-autos-tweet.onrender.com/api/reactions';
   
    constructor(
     private http: HttpClient,

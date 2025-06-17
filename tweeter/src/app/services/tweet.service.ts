@@ -10,7 +10,7 @@ import { StorageService } from "../services/storage.service";
 })
 export class TweetService {
 
- apiURL = 'http://localhost:8080/';
+ apiURL = 'https://back-autos-tweet.onrender.com/';
  token='';
 
  constructor(

@@ -8,7 +8,7 @@ import { User } from '../../models/user/User';
     providedIn: 'root'
   })
   export class NewUserService {
-  apiURL = 'http://localhost:8080/'; 
+  apiURL = 'https://back-autos-tweet.onrender.com/'; 
 
     constructor(private http: HttpClient) {}
 
